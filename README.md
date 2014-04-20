@@ -5,9 +5,9 @@ QR Code to Bitcoin addresses
 A simple java program which uses the awesome [zxing](https://github.com/zxing/zxing) library to find and transform the QR codes of bitcoin addresses in a scanned .png, and print them on the command line.
 
 It assumes you are using the [bitaddress](https://www.bitaddress.org) form to generate the following:
-1. Paper Wallet
-1. Hide Art is checked
-1. Generate 7 QR codes (can be less)
+1.  Paper Wallet
+2.  Hide Art is checked
+3.  Generate `7` QR codes (can be less)
 
 ## Build
 
