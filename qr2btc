@@ -1,0 +1,4 @@
+#!/bin/sh
+
+java -jar target/qr2btc-1.0-SNAPSHOT-jar-with-dependencies.jar $*
+
