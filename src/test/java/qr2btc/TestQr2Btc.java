@@ -85,6 +85,30 @@ public class TestQr2Btc
     assertEquals("5JN9B3ySt31XEycN6ZXmhbpZTMnW2Kn5B67CcQUeA6hQ6nHU6oz", result[13]);
   }
 
+  @Test
+  public void testDecode_14_enc() throws Exception
+  {
+    Qr2Btc qr2btc = new Qr2Btc();
+    Path p = FileSystems.getDefault().getPath("src", "test", "resources", "14_enc.png");
+
+    String[] result = qr2btc.decodeMultiple(p);
+    assertEquals(14, result.length);
+    assertEquals("1JSGkn7g5FmGLNas6q6UiuyMVpPFehzg2c",                  result[ 0]);
+    assertEquals("6PfYDTkdX78d7gM6YFkDCm68bYHf7zGH88aGP67nUVGt31fZGquppCB435", result[ 1]);
+    assertEquals("1Ey2cx9x7zUbkWS3ieTVrc58e9UtD1Cktp",                  result[ 2]);
+    assertEquals("6PfUMM6g5qi2NM597vYszPdhHzm5AAv4FnbiwUNqdjYeG1NGmdpw8cM4ZM", result[ 3]);
+    assertEquals("12QYwFUm6zzeWpU4NFmwZQdW8WrJQ9TMtY",                  result[ 4]);
+    assertEquals("6PfVxUd9D6GiCTpBPj6VnFT7GRvh6XWmp4r9mgC3CxZd9DoiTRY2ntmZYy", result[ 5]);
+    assertEquals("19yMc8FqDLsSZDgw4LXbftDmeEHKsmTXw7",                  result[ 6]);
+    assertEquals("6PfMbaxBCq5vTkixmmyXyNLJeFstVPAeBJ7tjpigD85H6FK7ZrhVjyFfD2", result[ 7]);
+    assertEquals("1EhZdny2L7YSUtabuTBQWi4x7Vn9SppoF1",                  result[ 8]);
+    assertEquals("6PfUdrRji3N2dxgWtyzabeaiGNgp2n1kRMuUWMthhB9TjckNsfY2ZWNFcj", result[ 9]);
+    assertEquals("1Mk5jtjbmpMV3xxUZvDPv2C21oGABgjKGD",                  result[10]);
+    assertEquals("6PfMRUuLMSJxLEGg8LZtHKWko67QsQqe6XmiYPCYX3pQh3DKaD2mUtvM7m", result[11]);
+    assertEquals("1CgA5yxpn5jkCZFTNdUJaNRUrxYefLEshR",                   result[12]);
+    assertEquals("6PfX9z7DcYu4uh3JcjWWujpSBwELZnSFSnv7VpjonjRzCipyun89pZk2AQ", result[13]);
+  }
+
   private void assertScannedPngOk(String[] result)
   {
     assertEquals(14, result.length);
@@ -114,8 +138,7 @@ public class TestQr2Btc
     assertScannedPngOk(result);
   }
 
-  // LAMb: This test fails right now because of ordering issues of the results
-  @Test(expected = org.junit.ComparisonFailure.class)
+  @Test
   public void testDecode_scanned_img_color() throws Exception
   {
     Qr2Btc qr2btc = new Qr2Btc();
@@ -125,8 +148,7 @@ public class TestQr2Btc
     assertScannedPngOk(result);
   }
 
-  // LAMb: This test fails right now because of ordering issues of the results
-  @Test(expected = org.junit.ComparisonFailure.class)
+  @Test
   public void testDecode_scanned_text_bw() throws Exception
   {
     Qr2Btc qr2btc = new Qr2Btc();

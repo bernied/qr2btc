@@ -48,7 +48,7 @@ public class Qr2Btc
    */
   public Qr2Btc()
   {
-    this(5.0f);
+    this(100.0f);
   }
 
   /**
